@@ -133,3 +133,5 @@ footer a { color: var(--paper); }
 .doc ul.feat li:first-child { border-top: 1px solid var(--line); }
 .doc ul.feat li::before { content: ""; position: absolute; left: 0; top: 17px; width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); }
 @media (max-width: 700px) { .doc ul.feat { columns: 1; } }
+.doc p a, .doc li a { color: var(--cyan); }
+.doc .jump a { color: var(--paper); }
