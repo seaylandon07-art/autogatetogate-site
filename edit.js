@@ -2,7 +2,7 @@
    Changes are kept in this browser and exported as text with "Copy my edits". */
 (function () {
   if (!/[?&]edit\b/.test(location.search)) return;
-  var PAGE = location.pathname.replace(/\/$/, '/index.html'), KEY = 'g2g-edits-v1:' + PAGE, store = {};
+  var PAGE = location.pathname.replace(/\/$/, '/index.html'), KEY = 'g2g-edits-v2:' + PAGE, store = {};
   try { store = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) {}
   function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
   function clean(el) {                                   // text, with <b> kept as **bold**

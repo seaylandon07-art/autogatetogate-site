@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Info — GateToGate</title>
-<meta name="description" content="Which aircraft GateToGate flies, how to set it up, and what it costs your frame rate.">
+<meta name="description" content="A more in-depth look at GateToGate: price, features, aircraft, setup and performance.">
 <link rel="canonical" href="https://autogatetogate.com/info.html">
 <link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,9 +25,11 @@
 <main class="doc">
   <p class="phase">Info</p>
   <h1>The details.</h1>
-  <p class="sub">Which aircraft it flies, how to set it up, and what it costs your frame rate.</p>
+  <p class="sub">A more in-depth look at GateToGate.</p>
   <ul class="jump">
     <li data-edit="v3"><a href="#status">Early access</a></li>
+    <li data-edit="j1"><a href="#product">The product</a></li>
+    <li data-edit="j2"><a href="#features">Features</a></li>
     <li><a href="#aircraft">Aircraft</a></li>
     <li><a href="#setup">Setup</a></li>
     <li><a href="#performance">Performance</a></li>
@@ -37,24 +39,90 @@
     <h2 data-edit="v4">Early access</h2>
     <p data-edit="v5">GateToGate is new. The current release is Early access v0.1. It flies complete flights from gate to gate today, but it has not seen every airport, aircraft and situation yet, so please expect some rough edges.</p>
     <ul>
-      <li data-edit="v6"><b>Most tested.</b> The FlyByWire A32NX is the aircraft it has flown the most.</li>
-      <li data-edit="v7"><b>Less tested.</b> The other aircraft, unusual airports and rare failures have had less time in the sim.</li>
-      <li data-edit="v8"><b>Updated often.</b> Fixes arrive as updates you install with one click, and your settings are kept.</li>
-      <li data-edit="v9"><b>Tell us what breaks.</b> The Send logs button packages what happened on a flight so it can be fixed.</li>
+      <li data-edit="v6"><b>Most tested.</b> The FlyByWire A32NX is the aircraft it has flown the most as of right now. New models will continue to be added throughout future updates.</li>
+      <li data-edit="v7"><b>Less tested.</b> The other aircraft, unusual airports and rare failures have had less time in the sim, but are still actively being tested and worked on daily.</li>
+      <li data-edit="v8"><b>Updated often.</b> Fixes arrive as updates you install with one click, and your settings are kept. You can also connect your GateToGate account to our Discord for updates and any questions or concerns you may have.</li>
+      <li data-edit="v9"><b>Tell us what breaks.</b> The Send logs button packages what happened on a flight so it can be fixed. Feel free to open a ticket in the Discord as well for additional help.</li>
+    </ul>
+  </article>
+
+  <article id="product">
+    <h2 data-edit="p1">The product</h2>
+    <ul>
+      <li data-edit="p2"><b>Price.</b> GateToGate is 20 USD while in early access. Early access includes all current features and all future features. The price will increase when GateToGate leaves early access, after all of our planned additions and aircraft have been added.</li>
+      <li data-edit="p3"><b>Release.</b> GateToGate is set to release on December 1, 2026.</li>
+      <li data-edit="p4"><b>One-time purchase.</b> GateToGate is a one-time purchase, whether that is the early access edition for 20 USD or the standard edition later on. If anyone advertises GateToGate as a recurring subscription, it is a scam and not us.</li>
+    </ul>
+  </article>
+
+  <article id="features">
+    <h2 data-edit="f1">Features</h2>
+    <p data-edit="f2">Some of the current features, included but not limited to:</p>
+    <h3 data-edit="f3">The whole flight</h3>
+    <ul class="feat">
+      <li>Flies the complete flight from the departure gate to the arrival gate</li>
+      <li>Starts from cold and dark: powers up and starts the engines</li>
+      <li>Fuel planning for the route</li>
+      <li>Holds short of runways and only crosses when traffic is clear</li>
+      <li>Awareness of other aircraft on the ground, giving way when needed</li>
+      <li>Takeoff, climb, cruise and descent flown with real procedures at a real pace</li>
+      <li>Handles turbulence and windshear</li>
+      <li>Flies holding patterns when needed (traffic, weather, runway change), corrected for wind</li>
+      <li>Goes around if the approach becomes unstable</li>
+      <li>ILS approach and autoland (FlyByWire aircraft)</li>
+      <li>Taxi in, park at the gate and shut down</li>
+    </ul>
+    <h3 data-edit="f4">When things go wrong</h3>
+    <ul class="feat">
+      <li>Handles failures quietly, without alarms or handing the controls back</li>
+      <li>Engine fire and other faults: diverts to the nearest suitable airport</li>
+      <li>Sets the emergency transponder code (7700) when required</li>
+      <li>Keeps flying if you are away from your desk</li>
+      <li>Take manual control at any time, then hand it back and it carries on from where the aircraft is</li>
+    </ul>
+    <h3 data-edit="f5">ATC and voices</h3>
+    <ul class="feat">
+      <li>Works with the built-in MSFS ATC</li>
+      <li>Optional “GateToGate is ATC” mode: it plays the controllers and the crew</li>
+      <li>IFR clearance, push and start, taxi, tower, departure and arrival calls</li>
+      <li>Correct read-backs with runway, hold-shorts, frequency and squawk</li>
+      <li>Radio transcript shown on the dashboard and in the sim panel</li>
+      <li>Tunes real airport frequencies when the sim provides them</li>
+      <li>Listens to the ATIS once, then returns the radio to its previous frequency</li>
+      <li>Crew callouts (V1, rotate, minimums and more) and cabin announcements</li>
+      <li>Uses Windows voices out of the box</li>
+      <li>Optional ElevenLabs voices: a different voice for each role, with a radio effect on controllers (uses your own ElevenLabs key)</li>
+    </ul>
+    <h3 data-edit="f6">Planning and setup</h3>
+    <ul class="feat">
+      <li>Plan flights the normal way: World Map, the in-sim EFB or SimBrief</li>
+      <li>Reads your route from the sim automatically</li>
+      <li>Fills in the MCDU on FlyByWire aircraft</li>
+      <li>Pre-flight check that lists anything to fix, with one-click Fix buttons</li>
+      <li>Speed up the cruise to as much as 16×</li>
+    </ul>
+    <h3 data-edit="f7">The app</h3>
+    <ul class="feat">
+      <li>Runs outside the sim, so the frame-rate cost is minimal</li>
+      <li>Toolbar panel inside MSFS for Engage, status and settings</li>
+      <li>Starts with MSFS, waits in the system tray and closes when the sim closes</li>
+      <li>Dashboard with live status</li>
+      <li>Settings for hotkeys, voices, ATC mode and more</li>
+      <li>One-click updater that keeps your settings and can roll back</li>
+      <li>“Send logs” button for support, with personal details removed</li>
     </ul>
   </article>
 
   <article id="aircraft">
     <h2>Aircraft</h2>
-    <p>GateToGate is built around the Airbus A320 family today. Each aircraft has its own profile, so it is flown by its own procedures and not by a one-size-fits-all autopilot.</p>
     <ul>
       <li><b>Airbus A320neo.</b> The default MSFS 2024 aircraft. Nothing extra to install.</li>
       <li><b>FlyByWire A32NX.</b> The free FlyByWire A320. This is the aircraft GateToGate is tuned on first, and it lands with autoland.</li>
       <li><b>FlyByWire A380X.</b> The free FlyByWire A380.</li>
     </ul>
     <h3>More aircraft are coming.</h3>
-    <p>We are adding aircraft one profile at a time, starting with the rest of the default MSFS 2024 fleet. Helicopters are planned after that.</p>
-    <p>Tell us which aircraft you want next.</p>
+    <p>We are adding aircraft one profile at a time, starting with the rest of the default MSFS 2024 fleet. Helicopters are planned after that. Stay up to date on our Discord for future additions to the fleet.</p>
+    <p>We are focusing on the more popular aircraft, but your opinion matters. Leave a review or a comment saying what you want added or which aircraft you would like to see. We value customer opinion.</p>
   </article>
 
   <article id="setup">
@@ -65,22 +133,22 @@
       <li><b>Start the sim.</b> GateToGate starts with it and waits quietly in the system tray, next to the clock.</li>
       <li><b>Plan the flight the normal way.</b> Use the World Map, or load a SimBrief plan. Adding your SimBrief username in settings is optional.</li>
       <li><b>Load in at the gate.</b> Cold and dark is fine. GateToGate reads the route from the sim.</li>
-      <li><b>Open the GateToGate panel</b> in the MSFS toolbar. It lists anything that needs fixing before departure and tells you how.</li>
-      <li><b>Press Engage.</b> It handles the rest, through to engine shutdown at the arrival gate.</li>
+      <li><b>Open the GateToGate panel</b> in the MSFS toolbar. It lists anything that needs fixing before departure and tells you how, if required.</li>
+      <li><b>Press Engage.</b> It handles the rest, through to engine shutdown at the arrival gate. Enjoy your flight.</li>
     </ol>
     <h3>Taking over</h3>
     <p>Press M at any point to fly the aircraft yourself. Press Resume to hand it back, and GateToGate picks the flight up from where the aircraft is.</p>
     <h3>Flying a FlyByWire aircraft</h3>
-    <p>Start FlyByWire SimBridge before you load the flight.</p>
+    <p>Start FlyByWire before you load the flight. FlyByWire is not a partner mod. We wanted to showcase how the autopilot could handle adverse flight conditions, and through research we found that FlyByWire paired with GSX would be a great opportunity to show what GateToGate is capable of.</p>
   </article>
 
   <article id="performance">
-    <h2>Performance</h2>
-    <p>GateToGate is a separate program that runs alongside the sim. It draws nothing inside MSFS apart from its small toolbar panel, so the cost to your frame rate is close to zero.</p>
+    <h2>The hit on performance...</h2>
+    <p>There isn’t one. GateToGate is an external program that runs alongside the sim. It draws nothing inside MSFS apart from its small toolbar panel, so the cost to your frame rate is close to zero. In fact, the frame rate drop is less than 1%.</p>
     <ul>
-      <li><b>Frame rate.</b> No extra scenery, effects or aircraft systems are loaded into the sim.</li>
-      <li><b>In the background.</b> It runs in the system tray and closes itself when the sim closes.</li>
-      <li><b>Long flights.</b> Speed the cruise up to 16×, then drop back to real time for the descent.</li>
+      <li><b>Meant to keep the frames high and the load low.</b> No extra scenery, effects or aircraft systems are loaded into the sim.</li>
+      <li><b>In the background.</b> It runs in the system tray and closes itself automatically when Microsoft Flight Simulator closes.</li>
+      <li><b>Long flights.</b> Speed the cruise up to 16×, then drop back to real time for the descent. This may impact performance, and if you choose to skip flight (skip to descent) you will have to reload into the session, so expect a brief loading screen before continuing the flight.</li>
     </ul>
   </article>
 
@@ -95,6 +163,6 @@
   </footer>
 </main>
 
-<script src="edit.js"></script>
+<script src="edit.js?v=2"></script>
 </body>
 </html>

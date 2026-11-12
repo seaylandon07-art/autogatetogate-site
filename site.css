@@ -128,3 +128,8 @@ footer a { color: var(--paper); }
 .badge { display: inline-block; margin-top: 22px; padding: 5px 14px; border: 1px solid var(--cyan); border-radius: 999px; background: rgba(60,200,255,.12); font-size: 14px; color: var(--paper); text-shadow: none; }
 .early { margin-top: 20px; max-width: 54ch; font-size: 14.5px; color: #e6edf6; }
 .early a { color: var(--paper); }
+.doc ul.feat { columns: 2; column-gap: 34px; max-width: none; }
+.doc ul.feat li { break-inside: avoid; padding: 8px 0 8px 18px; position: relative; font-size: 15.5px; border-top: 1px solid var(--line); }
+.doc ul.feat li:first-child { border-top: 1px solid var(--line); }
+.doc ul.feat li::before { content: ""; position: absolute; left: 0; top: 17px; width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); }
+@media (max-width: 700px) { .doc ul.feat { columns: 1; } }
