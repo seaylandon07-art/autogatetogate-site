@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Info — GateToGate</title>
+<meta name="description" content="Which aircraft GateToGate flies, how to set it up, and what it costs your frame rate.">
+<link rel="canonical" href="https://autogatetogate.com/info.html">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=B612+Mono&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="still" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="Main">
+  <a class="mark" href="index.html"><img src="logo.png" alt=""><span>GATE <i>TO</i> GATE</span></a>
+  <a class="link" href="index.html#flight">The flight</a>
+  <a class="link" href="info.html">Info</a>
+  <a class="btn" href="index.html#get">Get GateToGate</a>
+</nav>
+
+<main class="doc">
+  <p class="phase">Info</p>
+  <h1>The details.</h1>
+  <p class="sub">Which aircraft it flies, how to set it up, and what it costs your frame rate.</p>
+  <ul class="jump">
+    <li><a href="#aircraft">Aircraft</a></li>
+    <li><a href="#setup">Setup</a></li>
+    <li><a href="#performance">Performance</a></li>
+  </ul>
+
+  <article id="aircraft">
+    <h2>Aircraft</h2>
+    <p>GateToGate is built around the Airbus A320 family today. Each aircraft has its own profile, so it is flown by its own procedures and not by a one-size-fits-all autopilot.</p>
+    <ul>
+      <li><b>Airbus A320neo.</b> The default MSFS 2024 aircraft. Nothing extra to install.</li>
+      <li><b>FlyByWire A32NX.</b> The free FlyByWire A320. This is the aircraft GateToGate is tuned on first, and it lands with autoland.</li>
+      <li><b>FlyByWire A380X.</b> The free FlyByWire A380.</li>
+    </ul>
+    <h3>More aircraft are coming.</h3>
+    <p>We are adding aircraft one profile at a time, starting with the rest of the default MSFS 2024 fleet. Helicopters are planned after that.</p>
+    <p>Tell us which aircraft you want next.</p>
+  </article>
+
+  <article id="setup">
+    <h2>Setup</h2>
+    <p>You plan and load flights exactly as you do now. GateToGate adds one button.</p>
+    <ol>
+      <li><b>Install GateToGate.</b> Run the installer. Leave “Start with MSFS 2024” and “Add the toolbar panel” ticked.</li>
+      <li><b>Start the sim.</b> GateToGate starts with it and waits quietly in the system tray, next to the clock.</li>
+      <li><b>Plan the flight the normal way.</b> Use the World Map, or load a SimBrief plan. Adding your SimBrief username in settings is optional.</li>
+      <li><b>Load in at the gate.</b> Cold and dark is fine. GateToGate reads the route from the sim.</li>
+      <li><b>Open the GateToGate panel</b> in the MSFS toolbar. It lists anything that needs fixing before departure and tells you how.</li>
+      <li><b>Press Engage.</b> It handles the rest, through to engine shutdown at the arrival gate.</li>
+    </ol>
+    <h3>Taking over</h3>
+    <p>Press M at any point to fly the aircraft yourself. Press Resume to hand it back, and GateToGate picks the flight up from where the aircraft is.</p>
+    <h3>Flying a FlyByWire aircraft</h3>
+    <p>Start FlyByWire SimBridge before you load the flight.</p>
+  </article>
+
+  <article id="performance">
+    <h2>Performance</h2>
+    <p>GateToGate is a separate program that runs alongside the sim. It draws nothing inside MSFS apart from its small toolbar panel, so the cost to your frame rate is close to zero.</p>
+    <ul>
+      <li><b>Frame rate.</b> No extra scenery, effects or aircraft systems are loaded into the sim.</li>
+      <li><b>In the background.</b> It runs in the system tray and closes itself when the sim closes.</li>
+      <li><b>Long flights.</b> Speed the cruise up to 16×, then drop back to real time for the descent.</li>
+    </ul>
+  </article>
+
+  <div class="end">
+    <a class="btn" href="index.html#get">Get GateToGate</a>
+    <a class="btn ghost" href="index.html">Back to the flight</a>
+  </div>
+
+  <footer>
+    <p>GateToGate is an independent add-on. It is not affiliated with or endorsed by Microsoft, Asobo Studio, Airbus or FlyByWire Simulations. Microsoft Flight Simulator is a trademark of Microsoft.</p>
+    <p>Aircraft model in the film: “A320neo” by pranav27, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, modified.</p>
+  </footer>
+</main>
+
+<script src="edit.js"></script>
+</body>
+</html>
