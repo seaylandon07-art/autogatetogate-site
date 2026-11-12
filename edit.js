@@ -35,9 +35,11 @@
   });
   document.addEventListener('click', function (e) { var a = e.target.closest('a'); if (a && !a.closest('.editbar')) e.preventDefault(); }, true);
 
+  var onInfo = /info\.html$/.test(location.pathname);
   var bar = document.createElement('div'); bar.className = 'editbar';
   bar.innerHTML = '<span><b>Edit mode.</b> Click any text and type. <span id="ecount"></span></span>' +
-    '<button type="button" id="ecopy">Copy my edits</button><button type="button" class="quiet" id="ereset">Reset</button>';
+    '<button type="button" id="ecopy">Copy my edits</button><button type="button" class="quiet" id="ereset">Reset</button>' +
+    '<span class="go">Edit page: <a href="index.html?edit"' + (onInfo ? '' : ' aria-current="page"') + '>Home</a> <a href="info.html?edit"' + (onInfo ? ' aria-current="page"' : '') + '>Info</a> <a href="' + (onInfo ? 'info.html' : 'index.html') + '">Exit edit mode</a></span>';
   document.body.appendChild(bar);
   function changed() { return Object.keys(originals).filter(function (id) { var el = document.querySelector('[data-edit="' + id + '"]'); return clean(el) !== originals[id].text; }); }
   function count() { var c = changed().length; document.getElementById('ecount').textContent = c ? c + (c === 1 ? ' change' : ' changes') + ' so far.' : 'No changes yet.'; }

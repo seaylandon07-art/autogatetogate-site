@@ -120,3 +120,7 @@ footer a { color: var(--paper); }
 .doc footer { position: static; margin-top: 70px; padding: 18px 0 0; background: none; border-top: 1px solid var(--line); }
 
 @media (max-width: 360px) { .nav a.link[href$="#flight"] { display: none; } }
+.editbar .go { display: flex; align-items: center; gap: 6px; padding-left: 10px; border-left: 1px solid var(--line); color: var(--mute); }
+.editbar .go a { padding: 5px 11px; border: 1px solid var(--line); border-radius: 999px; color: var(--paper); text-decoration: none; }
+.editbar .go a:hover { border-color: var(--cyan); }
+.editbar .go a[aria-current] { border-color: var(--cyan); color: var(--cyan); }
