@@ -124,3 +124,4 @@ footer a { color: var(--paper); }
 .editbar .go a { padding: 5px 11px; border: 1px solid var(--line); border-radius: 999px; color: var(--paper); text-decoration: none; }
 .editbar .go a:hover { border-color: var(--cyan); }
 .editbar .go a[aria-current] { border-color: var(--cyan); color: var(--cyan); }
+.sub.long { max-width: 62ch; font-size: clamp(16px, 1.25vw, 18px); }
