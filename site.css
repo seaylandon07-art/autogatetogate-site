@@ -125,3 +125,5 @@ footer a { color: var(--paper); }
 .editbar .go a:hover { border-color: var(--cyan); }
 .editbar .go a[aria-current] { border-color: var(--cyan); color: var(--cyan); }
 .sub.long { max-width: 62ch; font-size: clamp(16px, 1.25vw, 18px); }
+.badge { display: inline-block; margin-top: 22px; padding: 5px 14px; border: 1px solid var(--cyan); border-radius: 999px; background: rgba(60,200,255,.12); font-size: 14px; color: var(--paper); text-shadow: none; }
+.early { margin-top: 20px; max-width: 54ch; font-size: 14.5px; color: #e6edf6; }

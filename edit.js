@@ -16,7 +16,7 @@
   document.documentElement.classList.add('editing');
   Array.prototype.forEach.call(els, function (el) {
     if (el.closest('footer')) return;
-    var id = 't' + ('0' + (++n)).slice(-2);
+    var id = el.getAttribute('data-edit') || 't' + ('0' + (++n)).slice(-2);   // pre-set ids keep the numbering stable when new text is added
     el.setAttribute('data-edit', id); el.setAttribute('contenteditable', 'true'); el.setAttribute('spellcheck', 'true');
     originals[id] = { html: el.innerHTML, text: clean(el) };
     if (store[id] != null) el.innerHTML = store[id];
