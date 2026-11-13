@@ -103,8 +103,11 @@
 <script>
 (function () {
   var small = Math.min(screen.width, screen.height) < 700 || (navigator.connection && navigator.connection.saveData);
-  var dir = small ? 'frames-s/' : 'frames/';
-  var N = small ? 120 : 240;                    // 1080p set for desktops, lighter set for phones
+  // phones held upright only ever show the middle strip of the picture, full height: they get that strip at the full 1080 px
+  // of height (frames-p, 720 x 1080) — the 960 x 540 set was stretched about 3x there and looked like 480p
+  var upright = innerHeight > innerWidth * 1.5;
+  var dir = small ? (upright ? 'frames-p/' : 'frames-s/') : 'frames/';
+  var N = small ? 120 : 240;                    // 1080p set for desktops, lighter sets for phones
   var canvas = document.getElementById('film'), ctx = canvas.getContext('2d');
   var veil = document.getElementById('veil'), route = document.getElementById('route');
   var frames = new Array(N + 1), loaded = new Array(N + 1);
