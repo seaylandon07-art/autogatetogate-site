@@ -100,7 +100,7 @@
 (function () {
   var small = Math.min(screen.width, screen.height) < 700 || (navigator.connection && navigator.connection.saveData);
   // phones held upright only ever show the middle strip of the picture, full height: they get that strip at the full 1080 px
-  // of height (frames-p, 720 x 1080) — the 960 x 540 set was stretched about 3x there and looked like 480p
+  // of height (frames-p, 720 x 1080: a crop that widens with the aircraft and follows it, sky extended upward) — the 960 x 540 set was stretched about 3x there and looked like 480p
   var upright = innerHeight > innerWidth * 1.5;
   var dir = small ? (upright ? 'frames-p/' : 'frames-s/') : 'frames/';
   var N = small && !upright ? 120 : 240;        // every frame for desktops and upright phones; every second one for the small landscape set
