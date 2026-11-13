@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=B612+Mono&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="site.css?v=3">
 </head>
 <body>
 <canvas id="film" aria-hidden="true"></canvas>
@@ -102,7 +102,7 @@
   // phones held upright only ever show the middle strip of the picture, full height: they get that strip at the full 1080 px
   // of height (frames-p, 720 x 1080: a crop that widens with the aircraft and follows it, sky extended upward) — the 960 x 540 set was stretched about 3x there and looked like 480p
   var upright = innerHeight > innerWidth * 1.5;
-  var dir = small ? (upright ? 'frames-p/' : 'frames-s/') : 'frames/';
+  var dir = small ? (upright ? 'frames-p2/' : 'frames-s/') : 'frames/';
   var N = small && !upright ? 120 : 240;        // every frame for desktops and upright phones; every second one for the small landscape set
   var canvas = document.getElementById('film'), ctx = canvas.getContext('2d');
   var veil = document.getElementById('veil'), route = document.getElementById('route');
@@ -132,7 +132,11 @@
   }
   function resize() {
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    W = canvas.width = Math.round(innerWidth * dpr); H = canvas.height = Math.round(innerHeight * dpr); shownKey = '';
+    // the canvas is as tall as the screen with the browser's bars hidden (100lvh): a phone's address bar sliding away mid-scroll
+    // must not resize it — that cleared the picture and rescaled it on every scroll
+    var w = Math.round(canvas.clientWidth * dpr), h = Math.round(canvas.clientHeight * dpr);
+    if (w === W && h === H) return;
+    W = canvas.width = w; H = canvas.height = h; shownKey = '';
   }
   function paint(i, alpha) {
     var im = frames[i]; if (!im) return;
