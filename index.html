@@ -103,7 +103,7 @@
   // of height (frames-p, 720 x 1080) — the 960 x 540 set was stretched about 3x there and looked like 480p
   var upright = innerHeight > innerWidth * 1.5;
   var dir = small ? (upright ? 'frames-p/' : 'frames-s/') : 'frames/';
-  var N = small ? 120 : 240;                    // 1080p set for desktops, lighter sets for phones
+  var N = small && !upright ? 120 : 240;        // every frame for desktops and upright phones; every second one for the small landscape set
   var canvas = document.getElementById('film'), ctx = canvas.getContext('2d');
   var veil = document.getElementById('veil'), route = document.getElementById('route');
   var frames = new Array(N + 1), loaded = new Array(N + 1);
@@ -134,16 +134,27 @@
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = canvas.width = Math.round(innerWidth * dpr); H = canvas.height = Math.round(innerHeight * dpr); shownKey = '';
   }
-  function paint(i) {
+  function paint(i, alpha) {
     var im = frames[i]; if (!im) return;
     var s = Math.max(W / im.naturalWidth, H / im.naturalHeight);
     var w = im.naturalWidth * s, h = im.naturalHeight * s;
+    ctx.globalAlpha = alpha;
     ctx.drawImage(im, (W - w) * 0.5, (H - h) * 0.5, w, h);
+    ctx.globalAlpha = 1;
   }
   function tick() {
     current += (target - current) * (reduce ? 1 : 0.16);
-    var i = nearest(Math.round(current)), key = 'n' + i;
-    if (i && key !== shownKey) { paint(i, 1); shownKey = key; }
+    // the two frames either side of the scroll position, cross-faded by how far between them it is: a slow scroll glides from
+    // one frame into the next instead of stepping
+    var c = Math.min(N, Math.max(1, current)), lo = Math.floor(c), hi = Math.min(N, lo + 1);
+    var f = reduce ? 0 : Math.round((c - lo) * 20) / 20;
+    if (loaded[lo] && loaded[hi]) {
+      var key = lo + ':' + f;
+      if (key !== shownKey) { paint(lo, 1); if (f > 0 && hi !== lo) paint(hi, f); shownKey = key; }
+    } else {
+      var i = nearest(Math.round(c)), k2 = 'n' + i;
+      if (i && k2 !== shownKey) { paint(i, 1); shownKey = k2; }
+    }
     requestAnimationFrame(tick);
   }
   function onScroll() {
