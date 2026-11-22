@@ -154,9 +154,3 @@ footer a { color: var(--paper); }
 
 .buy-btn.soon, .buy-btn.soon:hover { opacity: .45; cursor: not-allowed; background: var(--paper); border-color: var(--paper); color: var(--ink); }
 
-/* FAQ, on the home page */
-.faq { padding-top: 6vh; padding-bottom: 12vh; }
-.faq .qa { margin-top: 30px; width: min(820px, 100%); padding: 10px 26px 14px; border: 1px solid var(--line); border-radius: 18px; background: var(--glass); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); text-align: left; }
-.faq h3 { margin: 0; padding-top: 18px; border-top: 1px solid var(--line); font-family: var(--display); font-weight: 700; font-size: 24px; line-height: 1.1; }
-.faq h3:first-child { border-top: 0; }
-.faq p { margin: 8px 0 18px; font-size: 15.5px; color: #d5dfec; text-shadow: none; }
