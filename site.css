@@ -151,3 +151,5 @@ footer a { color: var(--paper); }
 .buy-note { margin-top: 12px; font-size: 13px; color: var(--mute); text-align: center; }
 .buy-note a { color: var(--paper); }
 @media (max-width: 820px) { .buy-price { font-size: 64px; } .buy-price .once { display: block; margin: 8px 0 0; vertical-align: 0; } }
+
+.buy-btn.soon, .buy-btn.soon:hover { opacity: .45; cursor: not-allowed; background: var(--paper); border-color: var(--paper); color: var(--ink); }

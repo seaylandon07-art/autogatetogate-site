@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=B612+Mono&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=4">
+<link rel="stylesheet" href="site.css?v=5">
 </head>
 <body>
 <canvas id="film" aria-hidden="true"></canvas>
@@ -87,7 +87,7 @@
     <p class="wordmark">GATE <i>TO</i> GATE</p>
     <p class="sub">A copilot you can rely on.</p>
     <div class="buy">
-      <p class="buy-tag" data-edit="b1">Early access</p>
+      <p class="buy-tag" data-edit="b1">Early access · December 1, 2026</p>
       <p class="buy-price"><span class="cur">$</span>20<span class="once" data-edit="b2">one-time, no subscription</span></p>
       <ul class="buy-list">
         <li data-edit="b3">Every future update and aircraft included</li>
@@ -95,7 +95,9 @@
         <li data-edit="b5">Download right after you buy</li>
         <li data-edit="b6">14-day refund, no questions asked</li>
       </ul>
-      <a class="btn buy-btn" id="cta" href="https://gatetogate.gumroad.com/l/oyyxkz" data-gumroad-overlay-checkout="true">Buy GateToGate · $20</a>
+      <!-- Launch day: replace the span below with this link and un-comment the gumroad.js script near the end of the page.
+      <a class="btn buy-btn" id="cta" href="https://gatetogate.gumroad.com/l/oyyxkz" data-gumroad-overlay-checkout="true">Buy GateToGate · $20</a> -->
+      <span class="btn buy-btn soon" id="cta" role="button" aria-disabled="true" data-edit="b7">Coming December 1</span>
       <p class="buy-note">Secure checkout by Gumroad · Questions? <a href="https://discord.gg/DQbXSznPA">Ask on Discord</a></p>
     </div>
     <p class="early" data-edit="v2">Early access v0.1. GateToGate works properly but is still in early access, so expect frequent updates. For more information, go to the <a href="info.html">Info page</a>.</p>
@@ -183,7 +185,8 @@
   resize(); onScroll(); current = target; load(Math.max(1, Math.round(target))); pump(); tick();
 })();
 </script>
-<script src="https://gumroad.com/js/gumroad.js"></script>
+<!-- Launch day: un-comment to open Gumroad checkout on the page.
+<script src="https://gumroad.com/js/gumroad.js"></script> -->
 <script src="edit.js?v=2"></script>
 </body>
 </html>
